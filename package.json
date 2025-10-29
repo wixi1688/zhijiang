@@ -7,7 +7,7 @@
     "dev:client": "vite --host --port 3000",
     "dev": "pnpm dev:client",
     "build:client": "vite build --outDir dist/static",
-    "build": "rm -rf dist && pnpm build:client && cp package.json dist && touch dist/build.flag"
+   "build": "rd /s /q dist && npm run build:client && copy package.json dist && type nul > dist/build.flag"
   },
   "dependencies": {
     "@types/d3": "^7.4.3",
